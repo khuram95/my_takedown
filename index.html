@@ -121,11 +121,15 @@ function initializeCP()
 				{					
 					console.log("khuram")
 					var script = document.createElement('script');
-					script.type = 'text/javascript';
-					script.src = 'assets/js/CPXHRLoader.js';
-					script.defer = 'defer';
-					script.onload = function()
+					script.setAttribute("src", "assets/js/CPXHRLoader.js");
+					script.setAttribute("type", "text/javascript");
+
+					// script.type = 'text/javascript';
+					// script.src = 'assets/js/CPXHRLoader.js';
+					// script.defer = 'defer';
+					scriptEle.addEventListener("load", function()
 					{
+						console.log("khuram", 3)
 						var lCSSLoaded = false;
 						var lJSLoaded = false;
 						function constructDIVs()
@@ -135,10 +139,10 @@ function initializeCP()
 								initializeCP();
 							}
 						}
-						// cpXHRJSLoader.css('assets/css/CPLibraryAll.css',function() {
-						// 	lCSSLoaded = true;
-						// 	constructDIVs();
-						// });
+						cpXHRJSLoader.css('assets/css/CPLibraryAll.css',function() {
+							lCSSLoaded = true;
+							constructDIVs();
+						});
 						var lJSFiles = [  'assets/js/jquery-3.3.1.min.js','assets/js/CPM.js' ];
 						// cpXHRJSLoader.js(lJSFiles,function()
 						// {
@@ -155,7 +159,7 @@ function initializeCP()
 						// 			constructDIVs();
 						// 	});
 						// });
-					}
+					})
 					document.getElementsByTagName('head')[0].appendChild(script);
 				},1);
 			},false);
