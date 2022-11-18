@@ -135,26 +135,26 @@ function initializeCP()
 								initializeCP();
 							}
 						}
-						cpXHRJSLoader.css('assets/css/CPLibraryAll.css',function() {
-							lCSSLoaded = true;
-							constructDIVs();
-						});
+						// cpXHRJSLoader.css('assets/css/CPLibraryAll.css',function() {
+						// 	lCSSLoaded = true;
+						// 	constructDIVs();
+						// });
 						var lJSFiles = [  'assets/js/jquery-3.3.1.min.js','assets/js/CPM.js' ];
-						cpXHRJSLoader.js(lJSFiles,function()
-						{
-							//console.log("js loaded");
+						// cpXHRJSLoader.js(lJSFiles,function()
+						// {
+						// 	//console.log("js loaded");
 
-							var imagesJSONFiles = [ 'dr/imgmd.json' ];
-							cpXHRJSLoader.loadImagesJSON(imagesJSONFiles,function(imageToJSONPathMap){
-								cp.imageToJSONPathMap = imageToJSONPathMap;
-								var imageJSONFiles = [ 'dr/img1.json','dr/img2.json','dr/img3.json' ];
-								if(window.location.protocol.substr(0,4) == "file")
-									cpXHRJSLoader.preloadURLs(imageJSONFiles, constructDIVs);
-								lJSLoaded = true;
-								if(window.location.protocol.substr(0,4) != "file" || !imageJSONFiles.length)
-									constructDIVs();
-							});
-						});
+						// 	var imagesJSONFiles = [ 'dr/imgmd.json' ];
+						// 	cpXHRJSLoader.loadImagesJSON(imagesJSONFiles,function(imageToJSONPathMap){
+						// 		cp.imageToJSONPathMap = imageToJSONPathMap;
+						// 		var imageJSONFiles = [ 'dr/img1.json','dr/img2.json','dr/img3.json' ];
+						// 		if(window.location.protocol.substr(0,4) == "file")
+						// 			cpXHRJSLoader.preloadURLs(imageJSONFiles, constructDIVs);
+						// 		lJSLoaded = true;
+						// 		if(window.location.protocol.substr(0,4) != "file" || !imageJSONFiles.length)
+						// 			constructDIVs();
+						// 	});
+						// });
 					}
 					document.getElementsByTagName('head')[0].appendChild(script);
 				},1);
