@@ -133,18 +133,18 @@ return{css:function(e,d){function a(){n()}var c=[],b,f,g,h,q,r;i||(b=navigator.u
 d(a[h])))};c.send()}if("file"==window.location.protocol.substr(0,4))v.apply(null,arguments);else{for(var a=[],c=0;c<arguments.length;c++)if("[object Array]"===Object.prototype.toString.call(arguments[c]))for(var b=arguments[c],f=0;f<b.length;f++)a.push(b[f]);else a.push(arguments[c]);var g={},h=0;d(a[0])}},loadImagesJSON:function(){function e(a){var b=new XMLHttpRequest;b.open("GET",a,!0);b.onreadystatechange=function(){if(4==b.readyState&&200===b.status){++f;var a=b.responseText;0==a.length?f==d.length-
 1&&d[f].call(null,""):(a=a.slice(54,a.length-1),a=JSON.parse(a),f>=d.length||(f==d.length-1?d[f].call(null,a):e(d[f])))}};b.send()}if("file"==window.location.protocol.substr(0,4))w.apply(null,arguments);else{for(var d=[],a=0;a<arguments.length;a++)if("[object Array]"===Object.prototype.toString.call(arguments[a]))for(var c=arguments[a],b=0;b<c.length;b++)d.push(c[b]);else d.push(arguments[a]);var f=0;e(d[0])}},preloadURLs:function(e){function d(){h++;h>=c.length||(h==c.length-1?c[h].call():a(c[h]))}
 function a(a){a=m("script",{src:a,async:!1});j.appendChild(a);a.onload=d}if("file"==window.location.protocol.substr(0,4)){for(var c=[],b=0;b<arguments.length;b++)if("[object Array]"===Object.prototype.toString.call(arguments[b]))for(var f=arguments[b],g=0;g<f.length;g++)c.push(f[g]);else c.push(arguments[b]);var h=0;a(e[0])}else for(b=0;b<e.length;b++)f=new XMLHttpRequest,f.open("GET",e[b],!0),f.onreadystatechange=function(){console.log("new lines loaded")},f.send()}}}
-return Promise.resolve("Success");
-}(window.document);
+(window.document);
+			}
 
 				// end
 
 
 
-
+				myfunction()
 				setTimeout(function() 
 				{					
-					myfunction().then(() =>{
-					console.log("in then", cpXHRJSLoader)
+					// myfunction().then(() =>{
+					console.log("in then")
 
 					// var script = document.createElement('script');
 					// script.type = 'text/javascript';
@@ -181,7 +181,7 @@ return Promise.resolve("Success");
 									constructDIVs();
 							});
 						});
-					})
+					// })
 					// }
 					// document.getElementsByTagName('head')[0].appendChild(script);
 				},5);
