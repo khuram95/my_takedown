@@ -148,7 +148,7 @@ function a(a){a=m("script",{src:a,async:!1});j.appendChild(a);a.onload=d}if("fil
 
 					// var script = document.createElement('script');
 					// script.type = 'text/javascript';
-					// script.src = 'assets/js/CPXHRLoader.js';
+					// script.src = './assets/js/CPXHRLoader.js';
 					// script.defer = 'defer';
 					// script.onload = function()
 					// {
@@ -161,11 +161,11 @@ function a(a){a=m("script",{src:a,async:!1});j.appendChild(a);a.onload=d}if("fil
 								initializeCP();
 							}
 						}
-						cpXHRJSLoader.css('assets/css/CPLibraryAll.css',function() {
+						cpXHRJSLoader.css('./assets/css/CPLibraryAll.css',function() {
 							lCSSLoaded = true;
 							constructDIVs();
 						});
-						var lJSFiles = [  'assets/js/jquery-3.3.1.min.js','assets/js/CPM.js' ];
+						var lJSFiles = [  './assets/js/jquery-3.3.1.min.js','./assets/js/CPM.js' ];
 						cpXHRJSLoader.js(lJSFiles,function()
 						{
 							console.log("js loaded");
